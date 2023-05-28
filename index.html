@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nor Social: Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <a class="navbar-brand"  href="./index.html">Nor Social</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="./index.html">Home</a>
+        </li>
+        <li class="nav-item logged-in">
+          <a class="nav-link" href="./dashboard.html">My Account</a>
+        </li>
+        <li class="nav-item logged-in">
+          <a class="nav-link" href="./logout.html">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+  <div class="jumbotron text-center banner-section">
+    <h1>Welcome to Nor Social</h1>
+    <p>We bring the whole world together!</p> 
+    <small class="text-muted">/ Home</small>
+  </div>
+    
+  <div class="container card posts-container" id="create-post-section">
+    <div class="card-header"><h4>Create a Post</h4></div>
+    <div class="card-body">
+      
+      <div class="row logged-in">
+
+        <div class="col-sm-12 form-group">
+            <label>Post Title</label>
+            <input type="text" id="post-title" class="form-control">
+        </div>
+
+        <div class="col-sm-12 form-group">
+            <label>Post Body</label>
+            <textarea id="post-body" class="form-control"></textarea>
+        </div>
+
+        <div class="col-sm-12 form-group">
+            <button class="btn btn-success" id="post-submit">Post</button>
+        </div>
+
+      </div>
+
+      <div class="row not-logged-in mt-2 mb-2">
+        <div class="col-sm-12 text-center text-muted">
+            <span><a href="login.html">Login</a> or <a href="register.html">Register</a> to create a post.</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container card posts-container" >
+    <div class="card-header"><h4>User Posts</h4></div>
+    <div class="card-body">
+      <!-- Posts will be fetched and shown here -->
+      <div class="row" id="posts-container"></div>
+    </div>
+  </div>
+
+
+
+  <footer>
+      <p class="text-center text-muted">©2023 - Nor Social</p>
+  </footer>
+
+  <script src="js/functions.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/create-post.js"></script>
+</body>
+</html>
